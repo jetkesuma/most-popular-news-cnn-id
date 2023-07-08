@@ -3,15 +3,6 @@ from bs4 import BeautifulSoup
 
 
 def data_extraction():
-    """
-    1. SBY tidak masalah jika Jokowi tidak suka dengan anies baswedan
-    2. Video: Bangunan 13 lantai Runtuh di Mesir, 4 Orang Terluka
-    3. Prabowo mendadak dipanggil jokowi, Gelar pertemuan Tertutup di Istana
-    4. Surya Paloh yakin anies tak akan jadi tersangka jelang pilpres 2024
-    5. Bahas Politik, Prabowo ditanya jokowi soal rencana ke depan
-    6. Erick thohir Ungkap kekurangan JIS untuk Venue Piala Dunia U-175
-    :return:
-    """
     try:
         content = requests.get('https://www.cnnindonesia.com/')
     except Exception:
