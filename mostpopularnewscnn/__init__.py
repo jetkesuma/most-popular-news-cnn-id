@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
+description = 'to get the most popular news in cnnindonesia.com'
 
 def data_extraction():
     try:
