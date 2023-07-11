@@ -9,10 +9,10 @@ class News:
         self.url = url
 
     def data_extraction(self):
-        pass
+        print('data_extraction not yet implemented')
 
     def show_data(self):
-        pass
+        print('show_data not yet implemented')
 
     def run(self):
         self.data_extraction()
@@ -81,9 +81,19 @@ class Mostpopularnewscnn(News):
         print(f"Most Popular News at CNN Indonesia number 6 is {self.result['numbersix']}")
 
 
+class NewsDetik(News):
+    def __init__(self, url):
+        super(NewsDetik, self).__init__(url, 'Not Yet Implemented')
+
+
 if __name__ == '__main__':
     most_popular_news_cnn_id = Mostpopularnewscnn('https://www.cnnindonesia.com/')
     print('Description class news cnn id', most_popular_news_cnn_id.description)
     most_popular_news_cnn_id.run()
+
+    detik_news = NewsDetik('Not Yet')
+    print('Description class news', detik_news.description)
+    detik_news.run()
+
     # most_popular_news_cnn_id.data_extraction()
     # most_popular_news_cnn_id.show_data()
