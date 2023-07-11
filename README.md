@@ -8,6 +8,7 @@ This package uses beatifulsoup4 and requests then produces output in the form of
 
 '''
 if __name__ == '__main__':
-    result = data_extraction()
-    show_data(result)
+    most_popular_news_cnn_id = Mostpopularnewscnn('https://www.cnnindonesia.com/')
+    print('Description class news cnn id', most_popular_news_cnn_id.description)
+    most_popular_news_cnn_id.run()
 '''

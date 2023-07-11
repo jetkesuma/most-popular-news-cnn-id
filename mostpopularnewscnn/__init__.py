@@ -92,7 +92,7 @@ if __name__ == '__main__':
     most_popular_news_cnn_id.run()
 
     detik_news = NewsDetik('Not Yet')
-    print('Description class news', detik_news.description)
+    print('Description class news in detik', detik_news.description)
     detik_news.run()
 
     # most_popular_news_cnn_id.data_extraction()
