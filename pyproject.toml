@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mostpopularnewscnn"
-version = "0.0.2"
+version = "0.0.3"
 authors = [
   { name="Tri Prasetyo Kusumo Aji", email="ajikprasetyo22@gmail.com" },
 ]
