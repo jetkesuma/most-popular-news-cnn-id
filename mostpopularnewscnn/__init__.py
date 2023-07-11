@@ -2,14 +2,30 @@ import requests
 import bs4
 
 
-class Mostpopularnewscnn:
-    def __init__(self):
-        self.description = 'to get the most popular news in cnnindonesia.com'
+class News:
+    def __init__(self, url, description):
+        self.description = description
         self.result = None
+        self.url = url
+
+    def data_extraction(self):
+        pass
+
+    def show_data(self):
+        pass
+
+    def run(self):
+        self.data_extraction()
+        self.show_data()
+
+
+class Mostpopularnewscnn(News):
+    def __init__(self, url):
+        super(Mostpopularnewscnn, self).__init__(url, 'to get the most popular news in cnnindonesia.com')
 
     def data_extraction(self):
         try:
-            content = requests.get('https://www.cnnindonesia.com/')
+            content = requests.get(self.url)
         except Exception:
             return None
         if content.status_code == 200:
@@ -51,7 +67,6 @@ class Mostpopularnewscnn:
         else:
             return None
 
-
     def show_data(self):
         if self.result is None:
             print("Cant Show data")
@@ -65,13 +80,9 @@ class Mostpopularnewscnn:
         print(f"Most Popular News at CNN Indonesia number 5 is {self.result['numberfive']}")
         print(f"Most Popular News at CNN Indonesia number 6 is {self.result['numbersix']}")
 
-    def run (self):
-        self.data_extraction()
-        self.show_data()
-
 
 if __name__ == '__main__':
-    most_popular_news_cnn_id = Mostpopularnewscnn()
+    most_popular_news_cnn_id = Mostpopularnewscnn('https://www.cnnindonesia.com/')
     print('Description class news cnn id', most_popular_news_cnn_id.description)
     most_popular_news_cnn_id.run()
     # most_popular_news_cnn_id.data_extraction()
